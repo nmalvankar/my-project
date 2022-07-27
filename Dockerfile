@@ -6,7 +6,6 @@ COPY package.json /usr/src/app
 RUN npm install
 COPY . /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
-#RUN npm install -g @angular/cli
 RUN ng build --configuration=production
 
 FROM nginx:latest
